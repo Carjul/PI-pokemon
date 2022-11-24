@@ -8,7 +8,7 @@ require('./db.js');
 const server = express();
 
 server.set('port',3001 || process.env.PORT)
-server.use(express.static(path.join(__dirname+'../../../client/build')))
+server.use(express.static(path.join(__dirname+'/public/build')))
 server.use(express.urlencoded({extended:false}))
 server.use(express.json());
 server.use(morgan('dev'));
